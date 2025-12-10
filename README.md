@@ -46,3 +46,24 @@ Technical Implementation:
 - The learner's project successfully calls the OpenAI API with the correct parameters.
 
 - The learner successfully used a front-end library to build the UI of the project.
+
+
+
+
+┌─────────────────────────────────────┐
+│   Interview Practice App            │
+├─────────────────────────────────────┤
+│                                     │
+│  What do you want to practice?      │
+│  ┌─────────────────────────────┐   │
+│  │ Type your question here...  │   │
+│  │                             │   │
+│  └─────────────────────────────┘   │
+│                                     │
+│  [Generate Interview Question]      │
+│                                     │
+│  ┌─────────────────────────────┐   │
+│  │ AI Response will appear     │   │
+│  │ here...                     │   │
+│  └─────────────────────────────┘   │
+└─────────────────────────────────────┘
