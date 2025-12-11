@@ -1,69 +1,79 @@
-IDE, tools, frameworks, languages and LLM that i have chosen:
+# Interview Practice App
 
-- VS Code
-- Claude AI
-- (react framework) Next.js 
-- Python, typescript
-- OpenAI API
+An AI-powered interview preparation tool built with Next.js and OpenAI API.
 
+## Tools & Technologies Used
 
+- **IDE:** VS Code
+- **Framework:** Next.js (React)
+- **Languages:** TypeScript, Python
+- **AI Model:** OpenAI API (GPT-4o-mini)
+- **Styling:** Tailwind CSS
 
-How i built this interview prep app:
+## How I Built This
 
-- Research the exact nature of interview preparation you want to do. This is intended as we want you to explore and get creative!
+### 1. Research & Planning
+Designed a split-screen interface where users can read AI responses while typing answers simultaneously.
 
-- Figure out how you are going to build the front-end, either using specific Streamlit components, or HTML/CSS in Next.js.
+### 2. Frontend Development
+Built with Next.js and Tailwind CSS featuring:
+- Split-screen layout (fixed input, scrollable output)
+- Real-time AI response display
+- Clean, professional UI
 
-- Create an OpenAI API Key for this project.
+### 3. OpenAI Integration
+- Created OpenAI API key
+- Selected GPT-4o-mini model
+- Implemented 5 system prompts with different techniques:
+  - Zero-Shot Prompting
+  - Few-Shot Learning
+  - Chain-of-Thought
+  - Role-Playing
+  - Structured Output
 
-- Choose one of the following OpenAI models for the project:
-GPT-4.1
-GPT-4.1 mini
-GPT-4.1 nano
-GPT-4o
-GPT-4o mini
+### 4. OpenAI Settings Tuned
+- Temperature, etc 
 
-- Write at least 5 system prompts with different techniques (few-shot learning, Chain-of-Thought, Zero-Shot Prompting, etc) and check which one works best for you.
+### 5. Security Guards Implemented
+- Input validation (type checking)
+- Max length limit (1000 characters)
+- Prompt injection protection
+- Empty input blocking
 
-- Tune at least one OpenAI setting (temperature, Top-p, frequency, etc).
+## Main Goals Achieved
 
-- Add at least one security guard to your app to prevent misuse (eg. inject prompting)
+---->**Technical Implementation**
+- Project works as intended - users can prepare for interviews with AI coaching
+- Successfully calls OpenAI API with correct parameters
+- Built complete UI using Next.js frontend library
 
+## Setup Instructions
 
-(OPTIONAL) upgrades that I have chosen:
+1. Install dependencies:
+```bash
+   npm install
+```
 
-- Improve ChatGPT prompts for your personal domain in which you would like to interview prep: IT, finance, HR, communication, etc.
+2. Create `.env.local` file:
+```
+   OPENAI_API_KEY=your-api-key-here
+```
 
-- Simulate different difficulty levels – Adjust the complexity of interview questions (easy, medium, hard).
+3. Run development server:
+```bash
+   npm run dev
+```
 
+4. Open [http://localhost:3000](http://localhost:3000)
 
+## File Structure
+```
+my-app/
+├── app/
+│   ├── api/interview/route.ts    # Backend API (OpenAI calls)
+│   └── page.tsx                  # Main UI component
+└── .env.local                    # API key (NOT COMMITTED)
+```
 
-MAIN GOALS OF THIS PROJECT
-Technical Implementation:
-
-- The learner's project works as intended; you can prepare for an interview by asking for help from the ChatGPT.
-
-- The learner's project successfully calls the OpenAI API with the correct parameters.
-
-- The learner successfully used a front-end library to build the UI of the project.
-
-
-
-
-┌─────────────────────────────────────┐
-│   Interview Practice App            │
-├─────────────────────────────────────┤
-│                                     │
-│  What do you want to practice?      │
-│  ┌─────────────────────────────┐   │
-│  │ Type your question here...  │   │
-│  │                             │   │
-│  └─────────────────────────────┘   │
-│                                     │
-│  [Generate Interview Question]      │
-│                                     │
-│  ┌─────────────────────────────┐   │
-│  │ AI Response will appear     │   │
-│  │ here...                     │   │
-│  └─────────────────────────────┘   │
-└─────────────────────────────────────┘
+## Author
+Layne Singh - Turing College AI Engineering Bootcamp
